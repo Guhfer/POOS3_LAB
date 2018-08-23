@@ -18,10 +18,16 @@ public class Main {
 		do {
 			JOptionPane.showMessageDialog(null, "Venda de ingressos", "Ingressos do Teatro POO",
 					JOptionPane.INFORMATION_MESSAGE);
-			JOptionPane.showMessageDialog(null, vendas.getCadeirasVazias()+" Cadeiras disponíveis", "Assentos Livres",
+			JOptionPane.showMessageDialog(null, vendas.getCadeirasVazias()+" Cadeiras disponÃ­veis", "Assentos Livres",
 					JOptionPane.INFORMATION_MESSAGE);
 			fileira = Integer.parseInt(JOptionPane.showInputDialog("Fileira:"));
 			assento = Integer.parseInt(JOptionPane.showInputDialog("Cadeira:"));
+			
+			/*
+			 * 1o Considerar a endentaÃ§Ã£o.
+			 * 2o Poderia ter utilizado apenas um JOptionPane para apresentar os tipos de impresso
+			 * e ler qual o tipo desejado. 
+			 */
 				JOptionPane.showMessageDialog(null, "Qual tipo de ingresso?\n 1 - Inteira \n 2 - Meia\n 3 - Isento",
 					"Ingressos do Teatro POO", JOptionPane.QUESTION_MESSAGE);
 			ingresso = Integer.parseInt(JOptionPane.showInputDialog("Ingresso tipo:"));
@@ -34,10 +40,10 @@ public class Main {
 			}
 			
 			if (!vendeu) {
-				JOptionPane.showMessageDialog(null, "Cadeira ou ingresso indisponivél!", "Ingresso do Teatro POO",
+				JOptionPane.showMessageDialog(null, "Cadeira ou ingresso indisponivil!", "Ingresso do Teatro POO",
 						JOptionPane.ERROR_MESSAGE);
 			} else {
-				JOptionPane.showMessageDialog(null, "Bom espetáculo", "Ingresso do Teatro POO",
+				JOptionPane.showMessageDialog(null, "Bom espetaculo", "Ingresso do Teatro POO",
 						JOptionPane.WARNING_MESSAGE);
 			}
 		} while (JOptionPane.showConfirmDialog(null, "Deseja encerrar o sistema?", "Ingressos do Teatro POO",
